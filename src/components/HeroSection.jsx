@@ -1,4 +1,6 @@
 import "../styles/HeroSection.css"
+import SkeletonText from "./SkeletonText";
+
 const HeroSection = () => {
     return (
         <section className="hero">
@@ -8,24 +10,23 @@ const HeroSection = () => {
             <div className="hero-container">
 
                 <div className="hero-text-content animate-up">
-                    <h1>
+                    <SkeletonText as="h1" lines={3}>
                         UNLOCK<br />
                         NEXT LEVEL<br />
                         PERFORMANCE
-                    </h1>
+                    </SkeletonText>
                 </div>
 
                 <div className="hero-side-card animate-up-delayed">
 
-                    <p>
-                        Data-driven testing, training, and advanced therapy
+                    <SkeletonText as="p" lines={4} widths={["100%", "100%", "88%", "45%"]}>                        Data-driven testing, training, and advanced therapy
                         to help you reach your physical peak — whether you're
                         a professional athlete or just getting started.
-                    </p>
+                    </SkeletonText>
 <div className="hero-button">
-    <a href="#" className="accent-btn">
+    <SkeletonText as="a" href="#" className="accent-btn" tone="accent" lines={1}>
         UNLOCK YOUR POTENTIAL
-    </a>
+    </SkeletonText>
 
     <span className="arrow accent-btn">
         →

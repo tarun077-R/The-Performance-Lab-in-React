@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import "../styles/PerformanceMotion.css";
+import SkeletonText from "./SkeletonText";
 
 
 const PerformanceMotion = () => {
@@ -198,39 +199,39 @@ const PerformanceMotion = () => {
             <div className="motion-sticky">
 
 
-                <div className="motion-label">
+                <SkeletonText as="div" className="motion-label" lines={1}>
                     PERFORMANCE / IN MOTION
-                </div>
+                </SkeletonText>
 
 
 
-                <div className="motion-bg-text">
+                <SkeletonText as="div" className="motion-bg-text" lines={1}>
                     PERFORMANCE
-                </div>
+                </SkeletonText>
 
-                <div className="motion-title motion-title-one">
+                <SkeletonText as="div" className="motion-title motion-title-one" lines={1}>
                     TRAIN
-                </div>
+                </SkeletonText>
 
-                <div className="motion-title motion-title-two">
+                <SkeletonText as="div" className="motion-title motion-title-two" lines={1}>
                     TEST
-                </div>
+                </SkeletonText>
 
-                <div className="motion-title motion-title-three">
+                <SkeletonText as="div" className="motion-title motion-title-three" lines={1}>
                     PERFORM
-                </div>
+                </SkeletonText>
 
                 <div className="motion-info">
 
-                    <span>
+                    <SkeletonText as="span" lines={1}>
                         01 / 03
-                    </span>
+                    </SkeletonText>
 
-                    <p>
+                    <SkeletonText as="p" lines={2}>
                         PERFORMANCE IS NOT
                         <br />
                         A DESTINATION.
-                    </p>
+                    </SkeletonText>
 
                 </div>
 
@@ -238,13 +239,13 @@ const PerformanceMotion = () => {
 
                 <div className="motion-bottom">
 
-                    <span>
+                    <SkeletonText as="span" lines={1}>
                         THE PERFORMANCE LAB
-                    </span>
+                    </SkeletonText>
 
-                    <span>
+                    <SkeletonText as="span" lines={1}>
                         SPORT / SCIENCE / PERFORMANCE
-                    </span>
+                    </SkeletonText>
 
                 </div>
 

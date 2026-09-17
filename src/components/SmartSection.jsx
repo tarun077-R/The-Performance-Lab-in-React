@@ -1,4 +1,6 @@
 import "../styles/SmartSection.css";
+import SkeletonImage from "./SkeletonImage";
+import SkeletonText from "./SkeletonText";
 
 import i1 from "../assets/i1.webp";
 import i2 from "../assets/i2.webp";
@@ -13,56 +15,58 @@ const SmartSection = () => {
 
 
             <div className="smart-image image-1">
-                <img src={i1} alt="" />
+                <SkeletonImage src={i1} alt="" tone="light" />
             </div>
 
             <div className="smart-image image-2">
-                <img src={i2} alt="" />
+                <SkeletonImage src={i2} alt="" tone="light" />
             </div>
 
             <div className="smart-image image-3">
-                <img src={i3} alt="" />
+                <SkeletonImage src={i3} alt="" tone="light" />
             </div>
 
             <div className="smart-image image-4">
-                <img src={i4} alt="" />
+                <SkeletonImage src={i4} alt="" tone="light" />
             </div>
 
             <div className="smart-image image-5">
-                <img src={i5} alt="" />
+                <SkeletonImage src={i5} alt="" tone="light" />
             </div>
 
             <div className="smart-image image-6">
-                <img src={i6} alt="" />
+                <SkeletonImage src={i6} alt="" tone="light" />
             </div>
 
 
 
             <div className="smart-intro">
 
-                <p>WHAT IS THE PERFORMANCE LAB</p>
+                <SkeletonText as="p" lines={1}>
+                    WHAT IS THE PERFORMANCE LAB
+                </SkeletonText>
 
-                <h2>
+                <SkeletonText as="h2" lines={3}>
                     Helping you move better,
                     <span>recover smarter </span> and perform at your best
-                </h2>
+                </SkeletonText>
             </div>
             <div className="smart-card">
                 <div className="smart-card-content">
 
-                    <p className="card-label">
+                    <SkeletonText as="p" className="card-label" lines={1}>
                         THE SMART WAY TO YOUR GOALS
-                    </p>
+                    </SkeletonText>
 
-                    <h3>
+                    <SkeletonText as="h3" lines={4} widths={["100%", "100%", "100%", "46%"]}>
                         Reach your goals. Whether you’re pursuing
                         professional sport, building lifelong strength,
                         or recovering from injury, we deliver the
                         expertise, technology, and guidance to help
                         you reach your full potential.
-                    </h3>
+                    </SkeletonText>
 
-                    <p className="card-description">
+                    <SkeletonText as="p" className="card-description" lines={6} widths={["100%", "100%", "100%", "100%", "100%", "34%"]}>
                         Discover your natural talents and weaknesses,
                         receive personalized training, and rebuild your
                         strength and flexibility after injury. Using the
@@ -70,13 +74,13 @@ const SmartSection = () => {
                         we translate it into clear insight and context,
                         helping you understand exactly what it means
                         and reach your maximum potential.
-                    </p>
+                    </SkeletonText>
 
                     <div className="card-button">
 
-                        <a href="#">
+                        <SkeletonText as="a" href="#" tone="light" lines={1}>
                             LEARN MORE ABOUT US
-                        </a>
+                        </SkeletonText>
 
                         <a href="#" className="arrow">
                             →

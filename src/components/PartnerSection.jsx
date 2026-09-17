@@ -1,4 +1,5 @@
 import "../styles/PartnerSection.css";
+import SkeletonImage from "./SkeletonImage";
 
 import p1 from "../assets/p1.svg";
 import p2 from "../assets/p2.svg";
@@ -14,51 +15,51 @@ const PartnerSection = () => {
             <div className="partners-track">
 
                 <div className="partner-logo">
-                    <img src={p1} alt="Partner 1" />
+                    <SkeletonImage src={p1} alt="Partner 1" tone="light" variant="contain" />
                 </div>
 
                 <div className="partner-logo">
-                    <img src={p2} alt="Partner 2" />
+                    <SkeletonImage src={p2} alt="Partner 2" tone="light" variant="contain" />
                 </div>
 
                 <div className="partner-logo">
-                    <img src={p3} alt="Partner 3" />
+                    <SkeletonImage src={p3} alt="Partner 3" tone="light" variant="contain" />
                 </div>
 
                 <div className="partner-logo">
-                    <img src={p4} alt="Partner 4" />
+                    <SkeletonImage src={p4} alt="Partner 4" tone="light" variant="contain" />
                 </div>
 
                 <div className="partner-logo">
-                    <img src={p6} alt="Partner 6" />
+                    <SkeletonImage src={p6} alt="Partner 6" tone="light" variant="contain" />
                 </div>
 
                 <div className="partner-logo">
-                    <img src={p7} alt="Partner 7" />
+                    <SkeletonImage src={p7} alt="Partner 7" tone="light" variant="contain" />
                 </div>
                 
                 <div className="partner-logo">
-                    <img src={p1} alt="Partner 1" />
+                    <SkeletonImage src={p1} alt="Partner 1" tone="light" variant="contain" />
                 </div>
 
                 <div className="partner-logo">
-                    <img src={p2} alt="Partner 2" />
+                    <SkeletonImage src={p2} alt="Partner 2" tone="light" variant="contain" />
                 </div>
 
                 <div className="partner-logo">
-                    <img src={p3} alt="Partner 3" />
+                    <SkeletonImage src={p3} alt="Partner 3" tone="light" variant="contain" />
                 </div>
 
                 <div className="partner-logo">
-                    <img src={p4} alt="Partner 4" />
+                    <SkeletonImage src={p4} alt="Partner 4" tone="light" variant="contain" />
                 </div>
 
                 <div className="partner-logo">
-                    <img src={p6} alt="Partner 6" />
+                    <SkeletonImage src={p6} alt="Partner 6" tone="light" variant="contain" />
                 </div>
 
                 <div className="partner-logo">
-                    <img src={p7} alt="Partner 7" />
+                    <SkeletonImage src={p7} alt="Partner 7" tone="light" variant="contain" />
                 </div>
 
             </div>

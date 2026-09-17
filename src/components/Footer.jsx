@@ -1,4 +1,6 @@
 import "../styles/Footer.css";
+import SkeletonImage from "./SkeletonImage";
+import SkeletonText from "./SkeletonText";
 
 import footerTraining from "../assets/footer-training.webp";
 
@@ -15,10 +17,10 @@ const Footer = () => {
                         STAY AHEAD OF THE CURVE
                     </span>
 
-                    <h2>
+                    <SkeletonText as="h2" lines={3} widths={["100%", "100%", "48%"]} tone="light">
                         Training insights, performance science, and
                         updates from the Lab — straight to your inbox.
-                    </h2>
+                    </SkeletonText>
 
                 </div>
 
@@ -54,9 +56,10 @@ const Footer = () => {
 
                 <div className="footer-image">
 
-                    <img
+                    <SkeletonImage
                         src={footerTraining}
                         alt="Performance Lab"
+                        tone="light"
                     />
 
                 </div>
@@ -157,9 +160,9 @@ const Footer = () => {
                         className="footer-cta"
                     >
 
-                        <span>
+                        <SkeletonText as="span" lines={1}>
                             BOOK A CONSULTATION
-                        </span>
+                        </SkeletonText>
 
                         <span className="footer-cta-arrow">
                             →

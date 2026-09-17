@@ -1,4 +1,6 @@
 import "../styles/FinalCTA.css";
+import SkeletonImage from "./SkeletonImage";
+import SkeletonText from "./SkeletonText";
 
 import gymFloor from "../assets/gym-floor.webp";
 
@@ -8,9 +10,11 @@ const FinalCTA = () => {
 
 
             <div className="final-cta-bg">
-                <img
+                <SkeletonImage
                     src={gymFloor}
                     alt="Performance Lab"
+                    tone="dark"
+                    
                 />
             </div>
             <div className="final-cta-overlay"></div>
@@ -19,17 +23,17 @@ const FinalCTA = () => {
 
             <div className="final-cta-title">
 
-                <span className="line line-1">
+                <SkeletonText as="span" className="line line-1" lines={1}>
                     THE
-                </span>
+                </SkeletonText>
 
-                <span className="line line-2">
+                <SkeletonText as="span" className="line line-2" lines={1}>
                     PERFORMANCE
-                </span>
+                </SkeletonText>
 
-                <span className="line line-3">
+                <SkeletonText as="span" className="line line-3" lines={1}>
                     LAB
-                </span>
+                </SkeletonText>
 
             </div>
 
@@ -40,9 +44,9 @@ const FinalCTA = () => {
                 href="#"
                 className="final-cta-button"
             >
-                <span>
+                <SkeletonText as="span" tone="light" lines={1}>
                     BOOK A CONSULTATION
-                </span>
+                </SkeletonText>
 
                 <span className="cta-arrow">
                     →

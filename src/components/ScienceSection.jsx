@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/ScienceSection.css";
+import SkeletonText from "./SkeletonText";
 
 const ScienceSection = () => {
     return (
@@ -8,9 +9,11 @@ const ScienceSection = () => {
 
             <div className="science-title">
 
-                <span className="science-number">#1</span>
+                <SkeletonText as="span" className="science-number" lines={1}>
+                    #1
+                </SkeletonText>
 
-                <h2>
+                <SkeletonText as="h2" lines={4}>
                     SPORTS
                     <br />
                     SCIENCE
@@ -18,7 +21,7 @@ const ScienceSection = () => {
                     CENTRE IN
                     <br />
                     CANADA
-                </h2>
+                </SkeletonText>
 
             </div>
 
@@ -28,18 +31,18 @@ const ScienceSection = () => {
 
                 <div className="science-main">
 
-                    <p className="science-label">
+                    <SkeletonText as="p" className="science-label" lines={1}>
                         THE PERFORMANCE LAB TEAM
-                    </p>
+                    </SkeletonText>
 
-                    <h3>
+                    <SkeletonText as="h3" lines={3} widths={["100%", "100%", "64%"]}>
                         Our team brings together world-class expertise
                         across sport science, strength &amp; conditioning,
                         and rehab therapy, each specialist at the top
                         of their field.
-                    </h3>
+                    </SkeletonText>
 
-                    <p className="science-description">
+                    <SkeletonText as="p" className="science-description" lines={6} widths={["100%", "100%", "100%", "100%", "100%", "38%"]}>
                         We’ve worked inside Olympic programs, Grand Slam
                         tennis, NHL locker rooms, and on MLB pitching
                         mounds. Our team includes Tennis Canada’s national
@@ -47,26 +50,26 @@ const ScienceSection = () => {
                         decades of combined experience treating professional
                         athletes, and practitioners trusted by some of the
                         most demanding training environments in sport.
-                    </p>
+                    </SkeletonText>
 
                 </div>
 
 
                 <div className="science-bottom">
 
-                    <p>
+                    <SkeletonText as="p" lines={3} widths={["100%", "100%", "52%"]}>
                         This isn’t a gym with credentials on the wall.
                         It’s a team that’s done the work at the highest
                         level, and now brings that same standard to
                         every client who walks through our doors.
-                    </p>
+                    </SkeletonText>
 
 
                     <a href="#" className="science-button">
 
-                        <span>
+                        <SkeletonText as="span" tone="light" lines={1}>
                             MEET THE PERFORMANCE LAB TEAM
-                        </span>
+                        </SkeletonText>
 
                         <span className="science-arrow">
                             →

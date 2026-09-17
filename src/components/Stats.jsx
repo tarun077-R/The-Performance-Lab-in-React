@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import "../styles/Stats.css";
+import SkeletonText from "./SkeletonText";
 
 const Stats = () => {
     const statsSectionRef = useRef(null);
@@ -206,34 +207,32 @@ const Stats = () => {
             <div className="stats-sticky">
 
 
-                <div className="stats-label">
+                <SkeletonText as="div" className="stats-label" lines={1}>
                     ABOUT US / NUMBERS
-                </div>
+                </SkeletonText>
 
 
                 <article className="stat stat-1">
 
-                    <div className="stat-title">
+                    <SkeletonText as="div" className="stat-title" lines={3}>
                         YEARS IN<br />
                         PROFESSIONAL<br />
                         SPORTS
-                    </div>
+                    </SkeletonText>
 
 
-                    <div className="stat-arrow">
-                        →
-                    </div>
+                    <SkeletonText as="div" className="stat-arrow" lines={1}>→</SkeletonText>
 
 
                     <div className="stat-number">
 
-                        <small>
+                        <SkeletonText as="small" lines={1}>
                             YEARS
-                        </small>
+                        </SkeletonText>
 
-                        <strong>
+                        <SkeletonText as="strong" lines={1}>
                             22+
-                        </strong>
+                        </SkeletonText>
 
                     </div>
 
@@ -241,38 +240,36 @@ const Stats = () => {
 
                 <article className="stat stat-2">
 
-                    <div className="stat-title">
+                    <SkeletonText as="div" className="stat-title" lines={3}>
                         PROFESSIONAL<br />
                         LEAGUES<br />
                         SERVED
-                    </div>
+                    </SkeletonText>
 
 
                     <div className="stat-leagues">
 
-                        <span>NHL</span>
-                        <span>MLB</span>
-                        <span>NBA</span>
-                        <span>MLS</span>
-                        <span>ATP</span>
+                        {["NHL", "MLB", "NBA", "MLS", "ATP"].map((league) => (
+                            <SkeletonText as="span" key={league} lines={1}>
+                                {league}
+                            </SkeletonText>
+                        ))}
 
                     </div>
 
 
-                    <div className="stat-arrow">
-                        →
-                    </div>
+                    <SkeletonText as="div" className="stat-arrow" lines={1}>→</SkeletonText>
 
 
                     <div className="stat-number">
 
-                        <small>
+                        <SkeletonText as="small" lines={1}>
                             LEAGUES
-                        </small>
+                        </SkeletonText>
 
-                        <strong>
+                        <SkeletonText as="strong" lines={1}>
                             10+
-                        </strong>
+                        </SkeletonText>
 
                     </div>
 
@@ -282,28 +279,26 @@ const Stats = () => {
 
                 <article className="stat stat-3">
 
-                    <div className="stat-title">
+                    <SkeletonText as="div" className="stat-title" lines={3}>
                         NCAA<br />
                         DIVISION 1<br />
                         COMMITMENTS
-                    </div>
+                    </SkeletonText>
 
 
-                    <div className="stat-arrow">
-                        →
-                    </div>
+                    <SkeletonText as="div" className="stat-arrow" lines={1}>→</SkeletonText>
 
 
                     <div className="stat-number">
 
-                        <small>
+                        <SkeletonText as="small" lines={1}>
                             ACHIEVED OVER<br />
                             $1M+ SCHOLARSHIPS
-                        </small>
+                        </SkeletonText>
 
-                        <strong>
+                        <SkeletonText as="strong" lines={1}>
                             100+
-                        </strong>
+                        </SkeletonText>
 
                     </div>
 
@@ -312,64 +307,45 @@ const Stats = () => {
 
                 <article className="stat stat-4">
 
-                    <div className="stat-title">
+                    <SkeletonText as="div" className="stat-title" lines={3}>
                         OLYMPIC<br />
                         PROGRAMS<br />
                         CONSULTED
-                    </div>
+                    </SkeletonText>
 
 
                     <div className="stat-programs">
 
-                        <span>
-                            USA TRACK CYCLING
-                        </span>
-
-                        <span>
-                            USA BOBSLED
-                        </span>
-
-                        <span>
-                            USA SKELETON
-                        </span>
-
-                        <span>
-                            TENNIS CANADA
-                        </span>
-
-                        <span>
-                            TEAM CANADA POLE VAULT
-                        </span>
-
-                        <span>
-                            TEAM CANADA SOFTBALL
-                        </span>
-
-                        <span>
-                            TEAM CANADA HOCKEY
-                        </span>
-
-                        <span>
-                            &amp; MORE
-                        </span>
+                        {[
+                            "USA TRACK CYCLING",
+                            "USA BOBSLED",
+                            "USA SKELETON",
+                            "TENNIS CANADA",
+                            "TEAM CANADA POLE VAULT",
+                            "TEAM CANADA SOFTBALL",
+                            "TEAM CANADA HOCKEY",
+                            "& MORE",
+                        ].map((program) => (
+                            <SkeletonText as="span" key={program} lines={1}>
+                                {program}
+                            </SkeletonText>
+                        ))}
 
                     </div>
 
 
-                    <div className="stat-arrow">
-                        →
-                    </div>
+                    <SkeletonText as="div" className="stat-arrow" lines={1}>→</SkeletonText>
 
 
                     <div className="stat-number">
 
-                        <small>
+                        <SkeletonText as="small" lines={1}>
                             PROGRAMS
-                        </small>
+                        </SkeletonText>
 
-                        <strong>
+                        <SkeletonText as="strong" lines={1}>
                             85+
-                        </strong>
+                        </SkeletonText>
 
                     </div>
 

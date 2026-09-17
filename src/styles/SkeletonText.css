@@ -1,0 +1,91 @@
+/* =============================================
+   Skeleton text loader
+   ============================================= */
+
+.skeleton-text {
+    position: relative;
+}
+
+/* Real text stays in the DOM for the exact box
+   size but is invisible while the skeleton shows */
+.skeleton-text .skeleton-text-content {
+    visibility: hidden;
+}
+
+/* Bars overlay the hidden text's box */
+.skeleton-text .skeleton-text-bars {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.22em;
+
+    overflow: hidden;
+
+    pointer-events: none;
+    user-select: none;
+}
+
+.skeleton-text-bar {
+    position: relative;
+
+    flex: 1 1 0;
+
+    width: var(--skeleton-width, 100%);
+
+    overflow: hidden;
+}
+
+.skeleton-text-bar::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    transform: translateX(-100%);
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--skeleton-text-highlight),
+        transparent
+    );
+
+    animation: skeleton-text-sweep 1.4s ease-in-out infinite;
+}
+
+/* On dark sections (#171717) */
+.skeleton-text-bar.dark {
+    background: #262626;
+
+    --skeleton-text-highlight: rgba(255, 255, 255, 0.07);
+}
+
+/* On light sections (#fff / #f4f4f4) */
+.skeleton-text-bar.light {
+    background: #e4e4e4;
+
+    --skeleton-text-highlight: rgba(255, 255, 255, 0.6);
+}
+
+/* On the orange accent buttons (#ff350d) */
+.skeleton-text-bar.accent {
+    background: rgba(255, 255, 255, 0.26);
+
+    --skeleton-text-highlight: rgba(255, 255, 255, 0.35);
+}
+
+@keyframes skeleton-text-sweep {
+    to {
+        transform: translateX(100%);
+    }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .skeleton-text-bar::after {
+        animation: none;
+    }
+}
