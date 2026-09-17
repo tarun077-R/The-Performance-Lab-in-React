@@ -1,16 +1,73 @@
-# React + Vite
+# The Performance Lab
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A modern sports performance website built with React and CSS, inspired by a professional sports science and performance training platform.
 
-Currently, two official plugins are available:
+The project focuses on creating a premium, animation-driven user experience with scroll interactions, parallax effects, responsive layouts, and modern UI design.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Tech Stack
 
-## React Compiler
+- React.js
+- Vite
+- JavaScript (ES6+)
+- HTML5
+- CSS3
+- CSS Animations
+- Responsive Design
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the Oxlint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- Modern and clean sports performance UI
+- Fully responsive design
+- Fixed navigation bar
+- Scroll-based navbar styling
+- Smooth scrolling
+- Scroll-based animations
+- Parallax effects
+- Animated statistics section
+- Performance in Motion section
+- Image animations and transitions
+- Hover effects
+- Interactive CTA buttons
+- Newsletter section
+- Modern footer layout
+- Component-based React architecture
+
+---
+
+## 📂 Project Structure
+
+```text
+src/
+│
+├── assets/
+│   ├── images
+│   └── logos
+│
+├── components/
+│   ├── Navbar.jsx
+│   ├── HeroSection.jsx
+│   ├── PartnerSection.jsx
+│   ├── SmartSection.jsx
+│   ├── ScienceSection.jsx
+│   ├── Stats.jsx
+│   ├── PerformanceMotion.jsx
+│   ├── FinalCTA.jsx
+│   └── Footer.jsx
+│
+├── styles/
+│   ├── Navbar.css
+│   ├── HeroSection.css
+│   ├── PartnerSection.css
+│   ├── SmartSection.css
+│   ├── ScienceSection.css
+│   ├── Stats.css
+│   ├── PerformanceMotion.css
+│   ├── FinalCTA.css
+│   └── Footer.css
+│
+├── App.jsx
+├── App.css
+├── index.css
+└── main.jsx
