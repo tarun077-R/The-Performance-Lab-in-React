@@ -1,0 +1,219 @@
+.hero {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh; /* handles mobile browser toolbars */
+
+    display: flex;
+    align-items: flex-end;
+
+    background: url("../assets/runner.jpg") no-repeat center / cover;
+
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        10deg,
+        rgba(10, 10, 10, 0.35),
+        rgba(10, 10, 10, 0.15)
+    );
+
+    z-index: 1;
+}
+
+
+.hero-container {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 40px;
+
+}
+
+
+.hero-text-content {
+    max-width: 900px;
+}
+
+.hero-text-content h1 {
+    margin: 0;
+
+    color: var(--text-main);
+
+    font-size: 8.2rem;
+    font-weight: 580;
+
+    line-height: 0.88;
+    letter-spacing: -5px;
+
+    text-transform: uppercase;
+}
+
+
+.hero-side-card {
+    max-width: 380px;
+
+    padding: 0 30px 5px 30px;
+}
+
+.hero-side-card p {
+    margin: 0 0 45px;
+
+    color: var(--text-muted);
+
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+
+.hero-button {
+    display: inline-flex;
+    align-items: stretch;
+}
+
+.accent-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 60px;
+
+    background: #ff350d;
+    color: #fff;
+
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+/* Text part */
+.hero-button a.accent-btn {
+    padding: 0 20px;
+}
+
+/* Arrow part */
+.hero-button .arrow {
+    width: 60px;
+
+    border-left: 1px solid rgba(255, 255, 255, 0.35);
+
+    font-size: 24px;
+    font-weight: 300;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* Hover */
+.hero-button:hover .accent-btn {
+    background: #e02d08;
+}
+
+.hero-button:hover .arrow {
+    transform: translateX(5px);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+
+/* ---------- Laptop / small desktop (<= 1024px) ---------- */
+
+@media (max-width: 1024px) {
+    .hero-container {
+        padding: 0 24px;
+        gap: 28px;
+    }
+
+    .hero-text-content h1 {
+        font-size: min(6rem, 9vw);
+        letter-spacing: -3px;
+    }
+
+    .hero-side-card {
+        max-width: 320px;
+        padding: 0 20px 5px 20px;
+    }
+}
+
+/* ---------- Tablet (<= 768px) ---------- */
+@media (max-width: 768px) {
+    .hero {
+        align-items: flex-end;
+    }
+
+    /* Stack text above the side card */
+    .hero-container {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        gap: 26px;
+        padding: 100px 24px 36px; /* top clears the fixed navbar */
+    }
+
+    .hero-text-content h1 {
+        font-size: min(4.2rem, 9vw);
+        letter-spacing: -2px;
+    }
+
+    .hero-side-card {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .hero-side-card p {
+        max-width: 520px;
+        margin: 0 0 24px;
+    }
+}
+
+/* ---------- Phone (<= 480px) ---------- */
+@media (max-width: 480px) {
+    .hero-container {
+        padding: 90px 16px 30px;
+        gap: 20px;
+    }
+
+    .hero-text-content h1 {
+        font-size: min(2.75rem, 11vw);
+        letter-spacing: -1px;
+    }
+
+    .hero-side-card p {
+        font-size: 0.78rem;
+        margin: 0 0 18px;
+    }
+
+    .accent-btn {
+        height: 54px;
+        font-size: 10px;
+    }
+
+    .hero-button .arrow {
+        width: 54px;
+        font-size: 20px;
+    }
+} 

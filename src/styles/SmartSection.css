@@ -1,0 +1,673 @@
+.smart-section {
+    position: relative;
+
+    width: 100%;
+    height: 1300px;
+
+    overflow: hidden;
+
+    background: #fff;
+    color: #111;
+
+    view-timeline-name: --smart-section;
+    view-timeline-axis: block;
+}
+
+.smart-card {
+    position: absolute;
+
+    top: 580px;
+    left: 50%;
+
+    z-index: 5;
+
+    width: 850px;
+    min-height: 650px;
+
+    transform: translateX(-50%);
+
+    overflow: hidden;
+
+    background: #fff;
+
+    border: 1px solid #ddd;
+
+    will-change: transform;
+
+    animation: cardMove linear both;
+    animation-timeline: --smart-section;
+    animation-range: entry 0% exit 100%;
+}
+
+
+@keyframes cardMove {
+    from {
+        transform: translate3d(-50%, 250px, 0);
+    }
+
+    to {
+        transform: translate3d(-50%, -250px, 0);
+    }
+}
+
+
+.smart-intro {
+    position: absolute;
+
+    top: 300px;
+    left: 50%;
+
+    z-index: 4;
+
+    width: 1100px;
+    max-width: 90%;
+
+    transform: translateX(-50%);
+
+    text-align: center;
+
+    will-change: transform;
+
+    animation: introMove linear both;
+    animation-timeline: --smart-section;
+    animation-range: entry 0% exit 100%;
+}
+
+
+@keyframes introMove {
+    from {
+        transform: translate3d(-50%, 0, 0);
+    }
+
+    to {
+        transform: translate3d(-50%, -180px, 0);
+    }
+}
+
+
+.smart-intro p {
+    margin-bottom: 12px;
+
+    color: #b8b8b8;
+
+    font-size: 11px;
+    font-weight: 500;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+.smart-intro h2 {
+    margin: 0;
+
+    font-size: clamp(50px, 5vw, 82px);
+
+    font-weight: 500;
+
+    line-height: 0.96;
+
+    letter-spacing: -4px;
+}
+
+
+.smart-intro h2 span {
+    background-color: #FF350D;
+
+    color: #111;
+
+    padding: 0 5px;
+}
+
+
+.smart-image {
+    position: absolute;
+
+    z-index: 2;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    will-change: transform;
+}
+
+
+.smart-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.image-1 {
+    width: 190px;
+    height: 185px;
+
+    top: 0;
+    right: 17%;
+
+    animation: image1Move linear both;
+    animation-timeline: --smart-section;
+    animation-range: entry 0% exit 100%;
+}
+
+
+@keyframes image1Move {
+    from {
+        transform: translate3d(0, 300px, 0);
+    }
+
+    to {
+        transform: translate3d(0, -500px, 0);
+    }
+}
+
+
+.image-2 {
+    width: 320px;
+    height: 230px;
+
+    top: 210px;
+    left: 3%;
+
+    animation: imageFast linear both;
+    animation-timeline: --smart-section;
+    animation-range: entry 0% exit 100%;
+}
+
+
+@keyframes imageFast {
+    from {
+        transform: translate3d(0, 250px, 0);
+    }
+
+    to {
+        transform: translate3d(0, -400px, 0);
+    }
+}
+
+.image-3 {
+    width: 170px;
+    height: 235px;
+
+    top: 650px;
+    left: 0;
+
+    animation: image3Move linear both;
+    animation-timeline: --smart-section;
+    animation-range: entry 0% exit 100%;
+}
+
+
+@keyframes image3Move {
+    from {
+        transform: translate3d(0, 400px, 0);
+    }
+
+    to {
+        transform: translate3d(0, -500px, 0);
+    }
+}
+
+.image-4 {
+    width: 190px;
+    height: 240px;
+
+    top: 450px;
+    right: 6%;
+
+    animation: image4Move linear both;
+    animation-timeline: --smart-section;
+    animation-range: entry 0% exit 100%;
+}
+
+
+@keyframes image4Move {
+    from {
+        transform: translate3d(0, 350px, 0);
+    }
+
+    to {
+        transform: translate3d(0, -550px, 0);
+    }
+}
+
+.image-5 {
+    width: 225px;
+    height: 165px;
+
+    bottom: 5px;
+    left: 3%;
+
+    animation: image5Move linear both;
+    animation-timeline: --smart-section;
+    animation-range: entry 0% exit 100%;
+}
+
+
+@keyframes image5Move {
+    from {
+        transform: translate3d(0, 300px, 0);
+    }
+
+    to {
+        transform: translate3d(0, -650px, 0);
+    }
+}
+
+
+.image-6 {
+    width: 250px;
+    height: 180px;
+
+    right: 0;
+    bottom: 200px;
+
+    animation: image6Move linear both;
+    animation-timeline: --smart-section;
+    animation-range: entry 0% exit 100%;
+}
+
+
+@keyframes image6Move {
+    from {
+        transform: translate3d(0, 350px, 0);
+    }
+
+    to {
+        transform: translate3d(0, -650px, 0);
+    }
+}
+
+
+.smart-card-content {
+    position: relative;
+
+    z-index: 3;
+
+    width: 100%;
+
+    padding: 70px 65px;
+}
+
+.card-label {
+    margin: 0 0 30px;
+
+    color: #999;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+.smart-card-content h3 {
+    max-width: 650px;
+
+    margin: 0 0 35px;
+
+    color: #111;
+
+    font-size: 32px;
+    font-weight: 500;
+
+    line-height: 1.15;
+
+    letter-spacing: -1.5px;
+}
+
+.card-description {
+    max-width: 620px;
+
+    margin: 0 0 40px;
+
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+.card-button {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.card-button a {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #111;
+
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+}
+
+
+.card-button .arrow {
+    width: 40px;
+    height: 40px;
+ background-color: var(--accent-color);
+
+    font-size: 18px;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+
+.card-button .arrow:hover {
+    background: #111;
+
+    color: #fff;
+}
+
+.big-text {
+    position: absolute;
+
+    right: 11px;
+    bottom: 8px;
+
+    z-index: 1;
+
+    color: #f5ecec;
+
+    font-size: 100px;
+    font-weight: 800;
+
+    line-height: 0.8;
+
+    letter-spacing: -7px;
+
+    text-align: right;
+
+    pointer-events: none;
+}
+
+.corner {
+    position: absolute;
+
+    z-index: 10;
+
+    color: var(--accent-color);
+
+    font-size: 28px;
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+
+.top-left {
+    top: -12px;
+    left: -9px;
+}
+
+
+.top-right {
+    top: -12px;
+    right: -9px;
+}
+
+
+.bottom-left {
+    bottom: -12px;
+    left: -9px;
+}
+
+
+.bottom-right {
+    right: -9px;
+    bottom: -12px;
+}
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+
+/* ---------- Laptop / small desktop (<= 1024px) ---------- */
+@media (max-width: 1024px) {
+    .smart-section {
+        height: 1150px;
+    }
+
+    .smart-intro {
+        top: 260px;
+    }
+
+    .smart-intro h2 {
+        font-size: clamp(38px, 5.5vw, 64px);
+        letter-spacing: -2.5px;
+    }
+
+    .smart-card {
+        top: 500px;
+        width: min(92%, 760px);
+        min-height: 0;
+    }
+
+    .smart-card-content {
+        padding: 50px 44px;
+    }
+
+    .image-1 {
+        width: 160px;
+        height: 160px;
+    }
+
+    .image-2 {
+        width: 260px;
+        height: 190px;
+        top: 180px;
+    }
+
+    .image-3 {
+        width: 150px;
+        height: 200px;
+        top: 560px;
+    }
+
+    .image-4 {
+        width: 160px;
+        height: 200px;
+        top: 390px;
+    }
+
+    .image-5 {
+        width: 190px;
+        height: 140px;
+    }
+
+    .image-6 {
+        width: 210px;
+        height: 150px;
+        bottom: 160px;
+    }
+
+    .big-text {
+        font-size: 76px;
+        letter-spacing: -5px;
+    }
+}
+
+/* ---------- Tablet (<= 768px) ---------- */
+@media (max-width: 768px) {
+    .smart-section {
+        height: 1050px;
+    }
+
+    .smart-intro {
+        top: 200px;
+        width: 92%;
+    }
+
+    .smart-intro h2 {
+        font-size: clamp(30px, 6.5vw, 46px);
+        letter-spacing: -1.5px;
+    }
+
+    .smart-card {
+        top: 400px;
+        width: min(94%, 640px);
+    }
+
+    .smart-card-content {
+        padding: 42px 30px;
+    }
+
+    .card-label {
+        margin-bottom: 20px;
+    }
+
+    .smart-card-content h3 {
+        margin-bottom: 24px;
+        font-size: 24px;
+        letter-spacing: -1px;
+    }
+
+    .card-description {
+        margin-bottom: 30px;
+        font-size: 13.5px;
+    }
+
+    .image-1 {
+        width: 120px;
+        height: 115px;
+        right: 8%;
+    }
+
+    .image-2 {
+        width: 190px;
+        height: 140px;
+        top: 140px;
+        left: 2%;
+    }
+
+    .image-3 {
+        display: none;
+    }
+
+    .image-4 {
+        width: 120px;
+        height: 150px;
+        top: 300px;
+        right: 4%;
+    }
+
+    .image-5 {
+        display: none;
+    }
+
+    .image-6 {
+ display: none;
+    }
+
+    .big-text {
+        right: 8px;
+        font-size: 56px;
+        letter-spacing: -3px;
+    }
+}
+
+/* ---------- Phone (<= 480px) ---------- */
+@media (max-width: 480px) {
+    .smart-section {
+        height: 980px;
+    }
+
+    .smart-intro {
+        top: 170px;
+        width: calc(100% - 32px);
+    }
+
+    .smart-intro p {
+        font-size: 10px;
+    }
+
+    .smart-intro h2 {
+        font-size: clamp(26px, 7.5vw, 34px);
+        letter-spacing: -1px;
+    }
+
+    .smart-card {
+        top: 340px;
+        width: calc(100% - 24px);
+        min-height: 0;
+    }
+
+    .smart-card-content {
+        padding: 30px 20px;
+    }
+
+    .card-label {
+        margin-bottom: 14px;
+        font-size: 10px;
+    }
+
+    .smart-card-content h3 {
+        margin-bottom: 18px;
+        font-size: 19px;
+        line-height: 1.2;
+    }
+
+    .card-description {
+        margin-bottom: 24px;
+        font-size: 12.5px;
+    }
+
+    .card-button a {
+        font-size: 10px;
+    }
+
+    .card-button .arrow {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+
+    /* Keep only 3 floating images on phones */
+    .image-1,
+    .image-3,
+    .image-5 {
+        display: none;
+    }
+
+    .image-2 {
+        width: 140px;
+        height: 100px;
+        top: 110px;
+    }
+
+    .image-4 {
+        width: 90px;
+        height: 110px;
+        top: 250px;
+    }
+
+    .image-6 {
+       display: none;
+    }
+
+    .big-text {
+        right: 6px;
+        font-size: 40px;
+        letter-spacing: -2px;
+    }
+}
