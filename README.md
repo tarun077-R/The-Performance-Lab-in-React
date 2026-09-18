@@ -6,7 +6,7 @@ The project focuses on creating a premium, animation-driven user experience with
 
 ## 🚀 Live Demo
 
-[View Live Demo](YOUR_LIVE_DEMO_URL)
+[View Live Demo](the-performance-lab-in-react.vercel.app)
 
 ## 🛠️ Tech Stack
 
