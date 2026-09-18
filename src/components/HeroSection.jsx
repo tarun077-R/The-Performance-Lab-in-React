@@ -1,9 +1,13 @@
-import "../styles/HeroSection.css"
-import SkeletonText from "./SkeletonText";
+import runnerImage from "../assets/runner-optimized.webp";
+import "../styles/HeroSection.css";
 
+import SkeletonText from "./SkeletonText";
 const HeroSection = () => {
     return (
-        <section className="hero">
+       <section
+  className="hero"
+  style={{ backgroundImage: `url(${runnerImage})` }}
+>
 
             <div className="hero-overlay"></div>
 

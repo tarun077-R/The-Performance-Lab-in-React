@@ -1,18 +1,43 @@
+import { lazy, Suspense } from "react";
 import "./App.css";
 import Navbar from './components/Navbar'
 import HeroSection from "./components/HeroSection"
-import PartnerSection from './components/PartnerSection'
-import SmartSection from './components/SmartSection'
-import ScienceSection from './components/ScienceSection'
-import Stats from './components/Stats'
-import PerformanceMotion from './components/PerformanceMotion'
-import FinalCTA from './components/FinalCTA'
-import Footer from './components/Footer'
+
+
+const PartnerSection = lazy(
+  () => import("./components/PartnerSection")
+);
+
+const PerformanceMotion = lazy(
+  () => import("./components/PerformanceMotion")
+);
+
+const SmartSection = lazy(
+  () => import("./components/SmartSection")
+);
+
+const ScienceSection = lazy(
+  () => import("./components/ScienceSection")
+);
+
+const Stats = lazy(
+  () => import("./components/Stats")
+);
+
+const FinalCTA = lazy(
+  () => import("./components/FinalCTA")
+);
+
+const Footer = lazy(
+  () => import("./components/Footer")
+);
 const App = () => {
   return (
     <>
   <Navbar/>
   <HeroSection/>
+    <Suspense fallback={<div>Loading...</div>}>
+    
   <PartnerSection/>
   <SmartSection/>
   <ScienceSection/>
@@ -20,6 +45,7 @@ const App = () => {
   <PerformanceMotion/>
   <FinalCTA/>
   <Footer/>
+    </Suspense>
 </>
   )
 }

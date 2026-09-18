@@ -1,14 +1,15 @@
 .hero {
     position: relative;
-
     width: 100%;
     min-height: 100vh;
-    min-height: 100svh; /* handles mobile browser toolbars */
+    min-height: 100svh;
 
     display: flex;
     align-items: flex-end;
 
-    background: url("../assets/runner.jpg") no-repeat center / cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
     overflow: hidden;
 }

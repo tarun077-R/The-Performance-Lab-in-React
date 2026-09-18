@@ -33,7 +33,9 @@ const SkeletonImage = ({
                 "skeleton-image",
                 variant,
                 loaded ? "loaded" : "",
-            ]}
+            ]
+                .join(" ")
+                .trim()}
         >
             {!loaded && (
                 <span

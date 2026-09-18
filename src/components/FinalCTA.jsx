@@ -3,9 +3,15 @@ import SkeletonImage from "./SkeletonImage";
 import SkeletonText from "./SkeletonText";
 
 import gymFloor from "../assets/gym-floor.webp";
+import Popup from "./PopUp";
+import { useState } from "react";
 
 const FinalCTA = () => {
+        const [popupOpen, setPopupOpen] = useState(false);
+        const [consultation, setConsultation] = useState(false);
+        const [services, setServices] = useState(false);
     return (
+        <>
         <section className="final-cta">
 
 
@@ -44,7 +50,7 @@ const FinalCTA = () => {
                 href="#"
                 className="final-cta-button"
             >
-                <SkeletonText as="span" tone="light" lines={1}>
+                <SkeletonText as="span" tone="light" lines={1}  onClick={() =>{setPopupOpen(true); setConsultation(true)}}>
                     BOOK A CONSULTATION
                 </SkeletonText>
 
@@ -54,6 +60,17 @@ const FinalCTA = () => {
             </a>
 
         </section>
+         {popupOpen && (
+                <Popup
+                consultation={consultation}
+                services={services}
+                    onClose={() => {
+                        setPopupOpen(false);
+                        setServices(false);
+                        setConsultation(false)}}
+                />
+            )}
+            </>
     );
 };
 
