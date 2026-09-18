@@ -69,7 +69,7 @@ The production build was tested using Lighthouse.
 - Performance: **100**
 - Accessibility: **92**
 - Best Practices: **100**
-- SEO: **83**
+- SEO: **92**
 
 > Lighthouse results may vary depending on browser, device, network conditions, and test environment.
 
